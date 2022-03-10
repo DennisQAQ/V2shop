@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>v2shop-admin</module>
         <module>v2shop-ware</module>
         <module>v2shop-product</module>
         <module>v2shop-order</module>
