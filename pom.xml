@@ -17,6 +17,7 @@
         <module>v2shop-order</module>
         <module>v2shop-member</module>
         <module>v2shop-coupon</module>
+        <module>v2shop-common</module>
     </modules>
 
 </project>
