@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://155.248.197.108:3306/V2shop_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://155.248.197.108:3306/V2shop_oms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: ShaBiCCP123!
 
@@ -12,4 +12,4 @@ mybatis-plus:
       id-type: auto
 
 server:
-  port: 10401
+  port: 10201
