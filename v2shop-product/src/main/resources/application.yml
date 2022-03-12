@@ -4,7 +4,12 @@ spring:
     url: jdbc:mysql://155.248.197.108:3306/V2shop_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: ShaBiCCP123!
-
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 155.248.197.108:8848
+  application:
+    name: v2shop-product
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:
