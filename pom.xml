@@ -18,6 +18,7 @@
         <module>v2shop-member</module>
         <module>v2shop-coupon</module>
         <module>v2shop-common</module>
+        <module>v2shop-gateway</module>
     </modules>
 
 </project>

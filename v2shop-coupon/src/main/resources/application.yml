@@ -1,0 +1,21 @@
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://155.248.197.108:3306/V2shop_sms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: ShaBiCCP123!
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 155.248.197.108:8848
+#  application:
+#    name: v2shop-coupon
+#
+#mybatis-plus:
+#  mapper-locations: classpath*:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
+#
+#server:
+#  port: 10001

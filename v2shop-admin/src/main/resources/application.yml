@@ -39,6 +39,12 @@ spring:
     throw-exception-if-no-handler-found: true
 #  resources:
 #    add-mappings: false
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 155.248.197.108:8848
+  application:
+    name: v2shop-admin
 
 
 #mybatis

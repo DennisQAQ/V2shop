@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.v2fly.v2shop.member.feign.CounponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -31,6 +32,20 @@ public class MemberController {
     @Autowired
     private MemberService memberService;
 
+
+    /**
+     * 测试远程调用方法
+     */
+    @Autowired
+    CounponFeignService CounponFeignService ;
+    @RequestMapping("/coupons")
+    public R testFeign(){
+        MemberEntity MemberEntity = new MemberEntity();
+        MemberEntity.setNickname("zs");
+        R membersCoupon = CounponFeignService.MembersCoupon();
+
+        return R.ok().put("member",MemberEntity).put("coupons",membersCoupon.get("coupons"));
+    }
     /**
      * 列表
      */
