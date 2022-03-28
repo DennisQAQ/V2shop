@@ -1,6 +1,7 @@
 package com.v2fly.v2shop.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -33,13 +34,13 @@ public class CategoryController {
 
     /**
      * 列表
+     * 查出所有分类以及子分类并以树形结构组装起来
      */
-    @RequestMapping("/list")
-    @RequiresPermissions("product:category:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = categoryService.queryPage(params);
+    @RequestMapping("/list/Tree")
 
-        return R.ok().put("page", page);
+    public R list(){
+        List<CategoryEntity> CategoryEntity=categoryService.listWithTrss();
+        return R.ok().put("data",CategoryEntity);
     }
 
 
@@ -51,7 +52,7 @@ public class CategoryController {
     public R info(@PathVariable("catId") Long catId){
 		CategoryEntity category = categoryService.getById(catId);
 
-        return R.ok().put("category", category);
+        return R.ok().put("data", category);
     }
 
     /**
@@ -82,8 +83,8 @@ public class CategoryController {
     @RequestMapping("/delete")
     @RequiresPermissions("product:category:delete")
     public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
-
+//		categoryService.removeByIds(Arrays.asList(catIds));
+        categoryService.removeMenuByIds(Arrays.asList(catIds));
         return R.ok();
     }
 

@@ -6,7 +6,6 @@
         <artifactId>v2shop</artifactId>
         <groupId>com.v2fly.v2shop</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath></relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,7 +14,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <mysql.version>8.0.17</mysql.version>
+        <mysql.version>8.0.22</mysql.version>
         <mssql.version>4.0</mssql.version>
         <oracle.version>11.2.0.3</oracle.version>
     </properties>
